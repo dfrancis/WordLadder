@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-package com.google.engedu.worldladder;
+package com.google.engedu.wordladder;
 
 import org.junit.Test;
 

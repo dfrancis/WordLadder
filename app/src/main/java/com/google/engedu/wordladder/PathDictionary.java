@@ -115,6 +115,7 @@ public class PathDictionary {
                 String neighbour = neighbourStrings.get(idx);
                 if (neighbour.compareTo(end) == 0) {
                     Log.d("Word ladder", "Found complete path");
+                    currPath.add(end);
                     String[] retArray = new String[currPath.size()];
                     retArray = currPath.toArray(retArray);
                     return retArray;

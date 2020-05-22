@@ -21,34 +21,60 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin">
+
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
-        <LinearLayout
+
+        <RelativeLayout
+            android:id="@+id/rlSolver"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Large Text"
-                android:id="@+id/startTextView" />
+            android:layout_height="wrap_content">
 
-            <TextView
+            <LinearLayout
+                android:id="@+id/solverStartView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Large Text"
-                android:id="@+id/endTextView" />
+                android:orientation="vertical">
 
-            <Button
+                <TextView
+                    android:id="@+id/startTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Large Text"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/solverMiddleView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="SOLVE"
-                android:id="@+id/solveButton"
-                android:layout_gravity="right"
-                android:onClick="onSolve" />
-        </LinearLayout>
+                android:layout_below="@id/solverStartView"></RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/solverEndView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/solverMiddleView"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/endTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Large Text"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <Button
+                    android:id="@+id/solveButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onSolve"
+                    android:text="SOLVE" />
+            </LinearLayout>
+
+        </RelativeLayout>
     </ScrollView>
+
 </LinearLayout>
